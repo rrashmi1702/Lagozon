@@ -217,3 +217,34 @@ function showNextTestimonial() {
 }
 
 setInterval(showNextTestimonial, 2000);
+
+
+
+// CONTACT US PAGE
+// Contact card
+// Bottom
+const buttons = document.querySelectorAll(".accordion-btn");
+
+        buttons.forEach((btn) => {
+            btn.addEventListener("click", function () {
+                const isActive = btn.classList.contains("active");
+
+                // Close all open accordions
+                document.querySelectorAll(".accordion-btn").forEach(b => b.classList.remove("active"));
+                document.querySelectorAll(".accordion-content").forEach(c => c.style.display = "none");
+
+                // Open the clicked one
+                if (!isActive) {
+                    btn.classList.add("active");
+                    btn.nextElementSibling.style.display = "block";
+                }
+            });
+        });
+
+
+
+// Submit
+document.getElementById("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  alert("Thank you! Your query has been submitted.");
+});
