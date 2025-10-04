@@ -142,7 +142,7 @@ header {
   opacity: 0;
   transition: all 180ms linear;
   position: absolute;
-  top: 174%;
+  top: 150%;
   left: -49px;
   background: #fff;
   border: 1px solid #ccc;
@@ -2281,4 +2281,271 @@ textarea {
     .office-info h3{
         font-size: 18px;
     }
+}
+
+/* =================== GENERATIVE AI PAGE ===================== */
+.genai-banner { --waves-offset: 200px; }
+.genai-banner {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    linear-gradient(var(--border) 1px, transparent 1px) 0 0/48px 48px,
+    linear-gradient(90deg, var(--border) 1px, transparent 1px) 0 0/48px 48px,
+    linear-gradient(180deg, color-mix(in srgb, var(--hero-accent) 12%, transparent) 0%, transparent 60%);
+  padding: 100px 0 clamp(40px, 6vh, 56px);
+  min-height: clamp(530px, 55vh, 560px);
+}
+
+.genai-banner-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  transform: translateY(-18px);
+}
+
+.genai-banner-title {
+  background: linear-gradient(to bottom, #111, #9aa0a6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+
+.genai-banner-desc {
+  color: var(--muted);
+  margin-top: 10px;
+  margin-inline: auto;
+  max-width: 720px;
+}
+
+.genai-banner-buttons {
+  margin-top: 28px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  justify-content: center;
+}
+
+/* --- Buttons --- */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 1;
+  border-radius: 999px;
+  padding: 20px 50px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+  transition: background .2s ease, border-color .2s ease, transform .06s ease;
+}
+.btn:active { transform: translateY(1px); }
+
+.btn--primary { background: #fff; color: #000; }
+.btn--primary:hover { background: var(--secondary-hover); }
+
+.btn--secondary { background: var(--secondary); color: #111; }
+.btn--secondary:hover { background: var(--secondary-hover); }
+
+/* --- Waves --- */
+.genai-banner-waves {
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: 1;
+  pointer-events: none;
+  transform: translateY(var(--waves-offset));
+}
+.genai-banner-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* Section - AI Interaction */
+.ai-interaction {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.ai-interaction p {
+    margin: 10px auto 20px;
+    color: #737373;
+}
+
+.ai-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.ai-card {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ai-card img {
+    height: 25px;
+    margin-bottom: 15px;
+}
+
+.ai-card h3 {
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #444;
+}
+
+.ai-card h3 span {
+    color: #0378A6;
+}
+
+.ai-card p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.explore-btn {
+  width: 90%;
+    background: transparent;
+    border: 1px solid #0378A6;
+    color: #0378A6;
+    padding: 8px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: none;
+}
+
+.explore-btn:hover {
+    background-color: #0378A6;
+    color: #fff;
+    transition: none;
+}
+
+
+
+
+
+
+/* Built Differently */
+.built-differently {
+    padding: 60px 20px 0px 20px;
+    background-color: #fff;
+}
+
+.built-differently h2 {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.container .highlight-green {
+    color: #A0B524;
+    font-size: clamp(22px, 2.5vw, 28px);
+}
+
+
+.content-wrapper {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.accordion-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.image-section {
+    flex: 1;
+    min-width: 150px;
+    background-image: url(imgs/intellidoc-workflow.jpg);
+    background-size: contain;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 300px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    background-color: #ffffff;
+}
+
+.accordion-item {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.accordion-btn {
+    width: 100%;
+    background: #fff;
+    border: none;
+    padding: 15px;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle-icon {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    background: #fafafa;
+    transition: all 0.3s ease;
+}
+
+.accordion-content p {
+    margin: 10px 0;
+}
+
+.accordion-item.active .accordion-content {
+    border-top: 2px solid rgba(0, 0, 0, 0.05);
+    max-height: 150px;
+    padding: 15px;
+}
+
+.accordion-item.active .toggle-icon {
+    transform: rotate(45deg);
+}
+
+/* Bottom color line */
+.bottom-line {
+    display: flex;
+    width: 100%;
+    height: 6px;
+    margin-top: 20px;
+}
+
+.line-grey {
+    background-color: #737373;
+    width: 33%;
+}
+
+.line-orange {
+    background-color: #F24C27;
+    width: 33%;
+}
+
+.line-blue {
+    background-color: #05AFF2;
+    width: 33%;
 }
