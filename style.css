@@ -2549,3 +2549,90 @@ textarea {
     background-color: #05AFF2;
     width: 33%;
 }
+
+/* ========== GENAI CASE STUDIES ========== */
+.genai-case-studies-section {
+  padding: 40px 20px;
+  background: #fff;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.genai-case-heading {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.genai-carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.genai-carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
+.genai-case-card {
+  flex: 0 0 calc(33.333% - 20px);
+  margin: 0 10px;
+  background: #fff;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 5px;
+}
+
+.genai-case-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.genai-case-card h3 { font-weight: bold; margin-bottom: 10px; }
+.genai-case-card p { flex-grow: 1; line-height: 1.6; color: #333; }
+
+.genai-view-more-btn {
+  margin-top: 15px;
+  padding: 8px 16px;
+  font-weight: bold;
+  border: 2px solid #0378A6;
+  border-radius: 8px;
+  color: #0378A6;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.genai-view-more-btn:hover { background: #0378A6; color: #fff; }
+
+.genai-carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+.genai-carousel-dots .genai-dot {
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.genai-carousel-dots .genai-dot.active { background: #05AFF2; }
+
+/* Responsive: 2 cards on tablets, 1 on mobile */
+@media (max-width: 992px) {
+  .genai-case-card { flex: 0 0 calc(50% - 20px); }
+}
+@media (max-width: 600px) {
+  .genai-case-card { flex: 0 0 calc(100% - 20px); }
+}

@@ -248,3 +248,6 @@ document.getElementById("contactForm").addEventListener("submit", function(e){
   e.preventDefault();
   alert("Thank you! Your query has been submitted.");
 });
+
+
+// Case studies- GEN AI
