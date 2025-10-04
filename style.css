@@ -1651,7 +1651,7 @@ header {
 
 .footer {
   background: #ffffff;
-  padding: 60px 60px 40px;
+  padding: 60px 60px 0px;
   color: #737373;
 }
 
@@ -1753,7 +1753,7 @@ header {
 
 .copyright {
   text-align: center;
-  padding: 25px 0;
+  padding: 15px 0;
   color: #666;
   font-size: 14px;
   border-top: 2px solid #e0e0e0;
