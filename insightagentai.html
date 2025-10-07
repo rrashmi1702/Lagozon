@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
     <!-- NAVBAR -->
     <header>
         <nav class="navbar">
@@ -22,7 +25,7 @@
                 <li>
                     <a href="#">Offerings</a>
                     <div class="popup">
-                        <a href="/genai.html">Generative AI</a>
+                        <a href="/genai.html">AI-Suite</a>
                         <a href="#">Data Engineering</a>
                         <a href="#">Data Analytics</a>
                     </div>
@@ -41,7 +44,7 @@
                 <li>
                     <a href="#">AI Hub</a>
                     <div class="popup">
-                        <a href="/insightagentai.html">IsightAgent AI</a>
+                        <a href="/insightagentai.html">InsightAgent AI</a>
                         <a href="#">DBQuery</a>
                         <a href="#">IntelliDoc AI</a>
                     </div>
@@ -77,6 +80,44 @@
         </nav>
     </header>
 
-    <h1>Coming Soon!</h1>
+    <section class="indoc-hero" aria-label="IntelliDoc Hero">
+        <div class="indoc-bg-ambient" aria-hidden="true"></div>
+
+        <div class="indoc-shapes" aria-hidden="true">
+            <div class="indoc-shape indoc-shape-1"></div>
+            <div class="indoc-shape indoc-shape-2"></div>
+            <div class="indoc-shape indoc-shape-3"></div>
+            <div class="indoc-shape indoc-shape-4"></div>
+            <div class="indoc-shape indoc-shape-5"></div>
+        </div>
+
+        <div class="indoc-container">
+            <div class="indoc-center">
+                <div class="indoc-badge indoc-fadeup" style="--i:0;">
+                    <svg class="indoc-dot" viewBox="0 0 10 10" width="10" height="10" aria-hidden="true">
+                        <circle cx="5" cy="5" r="5" fill="#05AFF2"></circle>
+                    </svg>
+                    <span>Document Intelligence</span>
+                </div>
+
+                <h1 class="indoc-title indoc-fadeup" style="--i:1;">
+                    <span class="indoc-title-1">Reimagine Your</span><br />
+                    <span class="indoc-title-2">Document Workflow</span>
+                </h1>
+
+                <p class="indoc-lead indoc-fadeup" style="--i:2;">
+                    Automate extraction, summarization, and compliance with AI-powered document insights designed for
+                    the modern enterprise.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+
 </body>
+<script type="module" src="script.js"></script>
+<script type="module" src="https://unpkg.com/@splinetool/viewer@latest/build/spline-viewer.js"></script>
+
 </html>
