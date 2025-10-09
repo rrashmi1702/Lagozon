@@ -2,16 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <meta charset="utf-8" />
+    <meta name="color-scheme" content="light" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lagozon.ai</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-     <!-- NAVBAR -->
-    <header>
+    <!-- ========== NAVBAR ========== -->
+    
+<header>
         <nav class="navbar">
             <span class="hamburger">&#9776;</span>
             <!-- Left: Logo -->
@@ -26,8 +28,8 @@
                     <a href="#">Offerings</a>
                     <div class="popup">
                         <a href="genai.html">AI-Suite</a>
-                        <a href="#">Data Engineering</a>
-                        <a href="#">Data Analytics</a>
+                        <a href="DE.html">Data Engineering</a>
+                        <a href="DA.html">Data Analytics</a>
                     </div>
                 </li>
                 <li>
@@ -45,8 +47,8 @@
                     <a href="#">AI Hub</a>
                     <div class="popup">
                         <a href="insightagentai.html">InsightAgent AI</a>
-                        <a href="#">DBQuery</a>
-                        <a href="#">IntelliDoc AI</a>
+                        <a href="DBQuery.html">DBQuery</a>
+                        <a href="intellidocai.html">IntelliDoc AI</a>
                     </div>
                 </li>
                 <li>
@@ -69,9 +71,9 @@
                     <a href="#">Company</a>
                     <div class="popup">
                         <a href="aboutus.html">About Lagozon</a>
-                        <a href="#">Meet Our Team</a>
-                        <a href="#">CSR</a>
-                        <a href="#">Careers</a>
+                        <a href="ourteam.html">Meet Our Team</a>
+                        <a href="CSR.html">CSR</a>
+                        <a href="careers.html">Careers</a>
                         <a href="#">News & Blogs</a>
                     </div>
                 </li>
@@ -81,51 +83,553 @@
             <div class="navbar-right">
                 <div class="top-right">
                     <a href="#"><span class="icon"><img src="imgs/nav-icons/demo.webp" alt="Demo" /></span>DEMO</a>
-                    <a href="/contact.html"><span class="icon"><img src="imgs/nav-icons/Contact us.webp"
+                    <a href="contact.html"><span class="icon"><img src="imgs/nav-icons/Contact us.webp"
                                 alt="Contact" /></span>CONTACT US</a>
                 </div>
             </div>
         </nav>
     </header>
-    
-    <section class="indoc-hero" aria-label="IntelliDoc Hero">
-        <div class="indoc-bg-ambient" aria-hidden="true"></div>
 
-        <div class="indoc-shapes" aria-hidden="true">
-            <div class="indoc-shape indoc-shape-1"></div>
-            <div class="indoc-shape indoc-shape-2"></div>
-            <div class="indoc-shape indoc-shape-3"></div>
-            <div class="indoc-shape indoc-shape-4"></div>
-            <div class="indoc-shape indoc-shape-5"></div>
+    <!-- ========== Hero Banner ========== -->
+    <section class="gent-hero" aria-labelledby="gent-hero-title">
+        <!-- Decorative background -->
+        <div class="gent-hero-bg" aria-hidden="true">
+            <div class="gent-blob gent-blob-a"></div>
+            <div class="gent-blob gent-blob-b"></div>
+            <div class="gent-grain"></div>
         </div>
 
-        <div class="indoc-container">
-            <div class="indoc-center">
-                <div class="indoc-badge indoc-fadeup" style="--i:0;">
-                    <svg class="indoc-dot" viewBox="0 0 10 10" width="10" height="10" aria-hidden="true">
-                        <circle cx="5" cy="5" r="5" fill="#05AFF2"></circle>
-                    </svg>
-                    <span>Document Intelligence</span>
+        <div class="gent-hero-inner">
+            <!-- Badge -->
+            <div class="gent-badge" id="gent-badge">
+                <span class="gent-badge-label">New</span>
+                <span class="gent-badge-dot"></span>
+                <span class="gent-badge-text">Try It Now</span>
+            </div>
+
+            <!-- Heading & Copy -->
+            <h1 id="gent-hero-title" class="gent-hero-title">
+                Intelligent Document Processing
+            </h1>
+
+            <p class="gent-hero-desc">
+                IntelliDoc.AI automates document analysis and data extraction, accelerating workflows and
+                decision-making.
+            </p>
+
+            <!-- CTAs -->
+            <div class="gent-cta">
+                <a href="#get-started" class="gent-btn gent-btn-primary">Get started</a>
+            </div>
+
+            <!-- Micro details -->
+            <ul class="gent-micro">
+                <li><span class="gent-dot"></span> Low-weight font</li>
+                <li><span class="gent-dot"></span> Tight tracking</li>
+                <li><span class="gent-dot"></span> Subtle motion</li>
+            </ul>
+        </div>
+
+        <!-- Fade at bottom -->
+        <div class="gent-bottom-fade" aria-hidden="true"></div>
+    </section>
+
+    <!-- ========== Featured Services ========== -->
+    <section class="gent-feature-section">
+        <div class="gent-feature-container">
+            <div class="gent-feature-title">
+                <h2>Where Intelligence Meets Efficiency</h2>
+            </div>
+            <div class="gent-feature-grid">
+
+                <article class="gent-feature-card">
+                    <div class="gent-feature-icon">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor"
+                            stroke-width="1.75">
+                            <path d="m4 17 6-6-6-6" />
+                            <path d="M13 19h7" />
+                        </svg>
+                    </div>
+                    <h3 class="gent-feature-title">AI-Powered Summarization</h3>
+                    <p class="gent-feature-desc">Extract actionable insights and summaries faster.</p>
+                </article>
+
+                <article class="gent-feature-card">
+                    <div class="gent-feature-icon">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor"
+                            stroke-width="1.75">
+                            <path d="M3 17c6 0 6-10 12-10h6" />
+                        </svg>
+                    </div>
+                    <h3 class="gent-feature-title">Intelligent Q&A Assistant</h3>
+                    <p class="gent-feature-desc">Retrieve relevant answers and key highlights instantly.</p>
+                </article>
+
+                <article class="gent-feature-card">
+                    <div class="gent-feature-icon">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor"
+                            stroke-width="1.75">
+                            <path d="M12 1v22" />
+                            <path
+                                d="M17 5.5c0-2.5-5-2.5-5-2.5S7 3 7 5.5 12 8 12 8s5 0 5 2.5S12 13 12 13s-5 0-5 2.5S12 18 12 18s5 0 5-2.5" />
+                        </svg>
+                    </div>
+                    <h3 class="gent-feature-title">Content Generation</h3>
+                    <p class="gent-feature-desc">Automatically create concise summaries and responses.</p>
+                </article>
+
+                <article class="gent-feature-card">
+                    <div class="gent-feature-icon">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor"
+                            stroke-width="1.75">
+                            <path d="M17.5 19a4.5 4.5 0 0 0 0-9 5.5 5.5 0 0 0-10.7-2A4.5 4.5 0 0 0 6.5 19h11z" />
+                        </svg>
+                    </div>
+                    <h3 class="gent-feature-title">Secure Cloud Hosting</h3>
+                    <p class="gent-feature-desc">Hosted on Azure, managed securely by Lagozon.</p>
+                </article>
+
+                <article class="gent-feature-card">
+                    <div class="gent-feature-icon">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor"
+                            stroke-width="1.75">
+                            <path d="M4 6h8a4 4 0 0 1 4 4v8" />
+                            <path d="M9 10l3-3-3-3" />
+                            <path d="M20 18h-8a4 4 0 0 1-4-4V6" />
+                            <path d="M15 14l-3 3 3 3" />
+                        </svg>
+                    </div>
+                    <h3 class="gent-feature-title">Seamless Integration</h3>
+                    <p class="gent-feature-desc">Easily integrate and enhance workflow efficiency.</p>
+                </article>
+
+                <article class="gent-feature-card">
+                    <div class="gent-feature-icon">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor"
+                            stroke-width="1.75">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M9.09 9a3 3 0 0 1 5.82 1c0 2-3 2-3 4" />
+                            <line x1="12" y1="17" x2="12.01" y2="17" />
+                        </svg>
+                    </div>
+                    <h3 class="gent-feature-title">User-Friendly Interface</h3>
+                    <p class="gent-feature-desc">Intuitive, simplified, and ready-to-use experience.</p>
+                </article>
+
+                <article class="gent-feature-card">
+                    <div class="gent-feature-icon">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor"
+                            stroke-width="1.75">
+                            <path d="M3 6h6" />
+                            <path d="M3 12h6" />
+                            <path d="M3 18h6" />
+                            <path d="m14 3-4 8h5l-1 10 6-12h-6l0-6z" />
+                        </svg>
+                    </div>
+                    <h3 class="gent-feature-title">Industry Customization</h3>
+                    <p class="gent-feature-desc">Tailored AI solutions for specific business needs.</p>
+                </article>
+
+                <article class="gent-feature-card">
+                    <div class="gent-feature-icon">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor"
+                            stroke-width="1.75">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-.99-.99a5.5 5.5 0 1 0-7.77 7.78l.99.99L12 21.35l7.78-7.78.99-.99a5.5 5.5 0 0 0 .07-7.97z" />
+                        </svg>
+                    </div>
+                    <h3 class="gent-feature-title">Scalable and Efficient</h3>
+                    <p class="gent-feature-desc">Manage large document volumes with peak performance.</p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== IntelliDoc.AI Call to Action Section ========== -->
+    <section class="intellidoc-cta-section">
+        <div class="intellidoc-cta-container">
+            <p class="intellidoc-cta-subtext">
+                Experience the power of INTELLIDOC.AI today!
+            </p>
+
+            <h2 class="intellidoc-cta-heading">
+                <span id="intellidoc-typewriter"></span>
+                <span class="intellidoc-cursor">|</span>
+            </h2>
+
+            <p class="intellidoc-cta-description">
+                Visit our Generative AI page to access our sandbox and try it yourself.
+            <div class="intellidoc-cta-buttons">
+                <a href="#" class="intellidoc-btn intellidoc-btn-outline">Try It Now!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== IntelliDoc.AI Business Section ========== -->
+    <section class="Intellidoc-business-section">
+        <div class="Intellidoc-business-container">
+            <h2 class="Intellidoc-business-heading">
+                How IntelliDoc.AI Will Help in Your Business
+            </h2>
+
+            <div class="Intellidoc-business-grid">
+                <!-- Card 1 -->
+                <div class="Intellidoc-business-card">
+                    <div class="Intellidoc-business-icon">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h3>Automated Document Processing</h3>
+                    <p>
+                        IntelliDoc.AI streamlines your document workflows by automating data extraction and
+                        processing, reducing manual efforts and improving operational efficiency.
+                    </p>
                 </div>
 
-                <h1 class="indoc-title indoc-fadeup" style="--i:1;">
-                    <span class="indoc-title-1">Reimagine Your</span><br />
-                    <span class="indoc-title-2">Document Workflow</span>
-                </h1>
+                <!-- Card 2 -->
+                <div class="Intellidoc-business-card">
+                    <div class="Intellidoc-business-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3>Enhanced Data Accuracy</h3>
+                    <p>
+                        Leverage advanced AI models to eliminate errors in document handling, ensuring data accuracy
+                        and reliability across all your processes.
+                    </p>
+                </div>
 
-                <p class="indoc-lead indoc-fadeup" style="--i:2;">
-                    Automate extraction, summarization, and compliance with AI-powered document insights designed for
-                    the modern enterprise.
+                <!-- Card 3 -->
+                <div class="Intellidoc-business-card">
+                    <div class="Intellidoc-business-icon">
+                        <i class="fa-solid fa-gauge-high"></i>
+                    </div>
+                    <h3>Accelerated Turnaround Time</h3>
+                    <p>
+                        Process large volumes of documents in seconds, enabling faster decision-making and improved
+                        customer response times.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="Intellidoc-business-card">
+                    <div class="Intellidoc-business-icon">
+                        <i class="fa-solid fa-coins"></i>
+                    </div>
+                    <h3>Cost-Effective Operations</h3>
+                    <p>
+                        Reduce operational costs associated with manual document handling and processing by
+                        implementing intelligent automation.
+                    </p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="Intellidoc-business-card">
+                    <div class="Intellidoc-business-icon">
+                        <i class="fa-solid fa-plug"></i>
+                    </div>
+                    <h3>Seamless Integration</h3>
+                    <p>
+                        IntelliDoc.AI integrates with your existing systems such as CRMs, ERPs, and databases,
+                        ensuring smooth adoption without disrupting workflows.
+                    </p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="Intellidoc-business-card">
+                    <div class="Intellidoc-business-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3>Data Security & Compliance</h3>
+                    <p>
+                        Ensure compliance with industry standards and regulations while keeping sensitive business
+                        data secure through robust encryption and controlled access.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== IntelliDoc.AI — Custom Pilot Hero Slice ========== -->
+    <section class="intellidoc-cpilot-slice" aria-labelledby="intellidoc-cpilot-heading">
+        <div class="intellidoc-cpilot-slice__inner">
+            <!-- Left: copy -->
+            <div class="intellidoc-cpilot-slice__copy">
+                <h2 id="intellidoc-cpilot-heading" class="intellidoc-cpilot-title">
+                    Your Custom Pilot Availability in Just 2 Weeks
+                </h2>
+                <p class="intellidoc-cpilot-desc">
+                    Launch your tailored pilot of IntelliDoc.AI in just 2weeks! Seamlessly integrate the solution,
+                    optimizedata workflows, and gain hands-on support to testits capabilities in your business
+                    environment.
                 </p>
+                <a href="#" class="intellidoc-cpilot-btn">Schedule A Demo</a>
+            </div>
+
+            <!-- Right: image -->
+            <div class="intellidoc-cpilot-slice__media">
+                <img src="imgs/intellidoc-workflow.jpg" alt="Abstract product preview" class="intellidoc-cpilot-img"
+                    loading="lazy" decoding="async" />
             </div>
         </div>
     </section>
 
 
+    <!-- GENAI CASE STUDIES -->
+    <section class="genai-case-studies-section">
+        <h2 class="genai-case-heading">Case Studies</h2>
+
+        <div class="genai-carousel-container">
+            <div class="genai-carousel-track" id="genaiCarouselTrack">
+                <div class="genai-case-card">
+                    <img class="genai-case-icon" src="imgs/Industries-icons/Healthcare.webp" alt="Healthcare" />
+                    <h3>Healthcare</h3>
+                    <p>Transform patient care and compliance with AI-driven document insights, real-time analytics, and
+                        smarter decision support systems.</p>
+                    <a href="#" class="genai-view-more-btn">View More</a>
+                </div>
+
+                <div class="genai-case-card">
+                    <img class="genai-case-icon" src="imgs/Industries-icons/Retail.webp" alt="Retail" />
+                    <h3>Retail</h3>
+                    <p>Optimize store performance, demand forecasting, and pricing strategies with AI-powered insights
+                        and automation.</p>
+                    <a href="#" class="genai-view-more-btn">View More</a>
+                </div>
+
+                <div class="genai-case-card">
+                    <img class="genai-case-icon" src="imgs/Industries-icons/Manufacturing.webp" alt="Manufacturing" />
+                    <h3>Manufacturing</h3>
+                    <p>Enhance operations, supply chain decisions, and quality control through data-driven intelligence
+                        and natural language access.</p>
+                    <a href="#" class="genai-view-more-btn">View More</a>
+                </div>
+
+                <div class="genai-case-card">
+                    <img class="genai-case-icon" src="imgs/Industries-icons/Logistics.webp" alt="Logistics" />
+                    <h3>Logistics</h3>
+                    <p>Boost supply chain efficiency with AI-driven tracking, forecasting, and real-time decision
+                        intelligence.</p>
+                    <a href="#" class="genai-view-more-btn">View More</a>
+                </div>
+
+                <div class="genai-case-card">
+                    <img class="genai-case-icon" src="imgs/Industries-icons/E-commerce.webp" alt="E-commerce" />
+                    <h3>E-commerce</h3>
+                    <p>Accelerate online growth with AI-powered personalization, demand forecasting, and smarter sales
+                        insights.</p>
+                    <a href="#" class="genai-view-more-btn">View More</a>
+                </div>
+
+                <div class="genai-case-card">
+                    <img class="genai-case-icon" src="imgs/Industries-icons/Pharmacy.webp" alt="Pharmaceuticals" />
+                    <h3>Pharmaceuticals</h3>
+                    <p>Drive faster drug development and smarter compliance with AI-powered analytics and document
+                        intelligence.</p>
+                    <a href="#" class="genai-view-more-btn">View More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="genai-carousel-dots" id="genaiCarouselDots" aria-label="Case studies pagination"></div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <!-- Contact Us -->
+    <main class="c-main">
+        <div class="c-container">
+            <div class="c-layout">
+                <!-- Left Side: Info -->
+                <div class="c-info">
+                    <h2 class="c-subtitle">Contact Us</h3>
+                        <p class="c-title">Let us know how we can help</p>
+                        <p class="c-text">
+                            We’re here to help and answer any question you might have.
+                            We look forward to hearing from you! Please fill out the form,
+                            or use the contact information below.
+                        </p>
+                        <ul class="c-contact-list">
+                            <li class="c-contact-item">
+                                <div class="c-icon">
+                                    <!-- Mail SVG -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="c-svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                                    </svg>
+                                </div>
+                                <p>contact@lagozon.com</p>
+                            </li>
+                            <li class="c-contact-item">
+                                <div class="c-icon">
+                                    <!-- Phone SVG -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="c-svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                                    </svg>
+                                </div>
+                                <p>+91 9810515823</p>
+                            </li>
+                            <li class="c-contact-item">
+                                <div class="c-icon">
+                                    <!-- Location SVG -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="c-svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                                    </svg>
+                                </div>
+                                <p>1F/2A, N.I.T, Faridabad, Haryana 121001</p>
+                            </li>
+                        </ul>
+                </div>
+
+                <!-- Right Side: Form -->
+                <div class="c-form-wrap">
+                    <form class="c-form" onsubmit="event.preventDefault()">
+                        <div class="c-field">
+                            <label class="c-label">Full name</label>
+                            <input type="text" required class="c-input" />
+                        </div>
+                        <div class="c-field">
+                            <label class="c-label">Email</label>
+                            <input type="email" required class="c-input" />
+                        </div>
+                        <div class="c-field">
+                            <label class="c-label">Company</label>
+                            <input type="text" required class="c-input" />
+                        </div>
+                        <div class="c-field">
+                            <label class="c-label">Message</label>
+                            <textarea required class="c-textarea"></textarea>
+                        </div>
+                        <button class="c-btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Footer -->
+    <div class="footer-header">
+        <h2>CONTACT US</h2>
+
+        <div class="social-icons">
+            <a href="https://in.linkedin.com/company/lagozon-technologies-private-limited" title="LinkedIn">in</a>
+            <a href="https://x.com/Lagozon?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                title="Twitter">𝕏</a>
+            <a href="https://www.facebook.com/LagozonTech/" title="Facebook">f</a>
+            <a href="https://www.youtube.com/channel/UC0MJrk3hk4-uR_fHdZdl_ng" title="YouTube">▶</a>
+            <a href="mailto:contact@lagozon.com" title="Email">✉</a>
+        </div>
+
+        <a href="mailto:contact@lagozon.com" class="email-link">contact@lagozon.com</a>
+    </div>
+
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>AI Solutions</h3>
+                <ul>
+                    <li><a href="insightagentai.html">InsightAgent AI</a></li>
+                    <li><a href="DBQuery.html">DBQuery AI</a></li>
+                    <li><a href="intellidocai.html">IntelliDoc AI</a></li>
+                </ul>
+                <h3 style="margin-top: 30px;">Services</h3>
+                <ul>
+                    <li><a href="genai.html">Generative AI Solutions</a></li>
+                    <li><a href="#">Microsoft Fabric</a></li>
+                    <li><a href="#">Databricks Platform</a></li>
+                    <li><a href="#">Snowflake Data Platform</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="aboutus.html">Company Overview</a></li>
+                    <li><a href="ourteam.html">Leadership Team</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="#">Partnership</a></li>
+                    <li><a href="CSR.html">CSR</a></li>
+                </ul>
+                <h3 style="margin-top: 30px;">Insight Hub</h3>
+                <ul>
+                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="#">Client Testimonial</a></li>
+                    <li><a href="#">Awards & Recognition</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <div class="office-info">
+                    <h4>USA Office:</h4>
+                    <p>+1 417-763-6762</p>
+                    <p>5000 Center Green Way, Suite 500, Cary NC 27513</p>
+                    <p style="margin-top: 10px;">+1 (302) 600-0071</p>
+                    <p>800 N King Street, Suite 304 #1751, Wilmington, DE 19801, USA</p>
+                </div>
+
+                <div class="office-info">
+                    <h4>Canada Office:</h4>
+                    <p>+1 (778) 325 9804 2729</p>
+                    <p>2729, 158th St, Unit#107, Surrey, BC V2Z 1P4</p>
+                </div>
+
+                <div class="office-info">
+                    <h4>Singapore Office:</h4>
+                    <p>+65 64328112</p>
+                    <p>03-01 Betime Building, Singapore</p>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <div class="office-info">
+                    <h4>Delhi Head Office:</h4>
+                    <p>+91 9810515823</p>
+                    <p>FB/B-1 Extension, Mohan Industrial Estate, Badarpur, New Delhi 110044, India</p>
+                </div>
+
+                <div class="office-info">
+                    <h4>Registered Office:</h4>
+                    <p>1F/2A, N.I.T, Faridabad, Haryana 121001</p>
+                </div>
+            </div>
+
+            <div class="footer-column connect-section">
+                <h3>Connect</h3>
+                <p>Subscribe for news, insights, and updates from Lagozon</p>
+                <input type="email" class="email-input" placeholder="Email ID">
+                <button class="submit-btn">Submit</button>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d112195.62484102245!2d77.21708798807504!3d28.50623944923464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x390ce51b50c13d45%3A0xc9b4b39246efa757!2sB-1%20Extension%2C%20FB%2C%20NH-19%2C%20Block%20B-1%2C%20Block%20E%2C%20Mohan%20Cooperative%20Industrial%20Estate%2C%20Badarpur%2C%20Delhi%2C%20New%20Delhi%2C%20Delhi%20110044!3m2!1d28.506264299999998!2d77.2994894!5e0!3m2!1sen!2sin!4v1759488924995!5m2!1sen!2sin"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            Copyright © Lagozon Technologies 2025
+        </div>
+    </div>
+
+
 
 
 </body>
-<script type="module" src="script.js"></script>
-<script type="module" src="https://unpkg.com/@splinetool/viewer@latest/build/spline-viewer.js"></script>
+<script src="script.js"></script>
 
 </html>

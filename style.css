@@ -1300,9 +1300,7 @@ header {
     max-width: 80%;
   }
 
-  .home-case-card h3 {
-    font-size: 16px;
-  }
+  .home-case-card h3 { font-size: 16px; }
 
   .home-case-card p {
     font-size: 14px;
@@ -1329,7 +1327,6 @@ header {
     max-width: 80%;
   }
 }
-
 /* ====== Testimonials ======= */
 .testimonial-section {
   border-bottom: 2px solid rgba(0, 0, 0, 0.08);
@@ -1820,7 +1817,7 @@ header {
 
 .footer {
   background: #ffffff;
-  padding: 60px 60px 0px;
+  padding: 60px 60px 10px;
   color: #737373;
 }
 
@@ -2932,6 +2929,255 @@ textarea {
 }
 
 /* Intellidocai - Page */
+/* ---------- Base ---------- */
+.intellidoc-cta-section {
+  background: var(--surface);
+  padding: 20px 20px;
+  text-align: center;
+  color: var(--ink);
+}
+
+.intellidoc-cta-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.intellidoc-cta-subtext {
+  color: var(--muted);
+  font-size: clamp(14px, 1.2vw, 16px);
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.intellidoc-cta-heading {
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 16px;
+  min-height: 60px;
+}
+
+.intellidoc-cursor {
+  display: inline-block;
+  color: var(--primary);
+  font-weight: bold;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.intellidoc-cta-description {
+  color: var(--muted);
+  font-size: clamp(14px, 1.2vw, 18px);
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+/* ---------- Buttons ---------- */
+.intellidoc-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.intellidoc-btn {
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: clamp(14px, 1.2vw, 16px);
+}
+
+.intellidoc-btn-primary {
+  background-color: var(--primary-cta);
+  color: white;
+  border: 2px solid transparent;
+}
+
+.intellidoc-btn-primary:hover {
+  background-color: var(--primary-cta-hover);
+}
+
+.intellidoc-btn-outline {
+  background-color: white;
+  border: 2px solid var(--primary-cta);
+  color: var(--primary-cta);
+}
+
+.intellidoc-btn-outline:hover {
+  background-color: var(--secondary-hover);
+  color: var(--primary-cta-hover);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .intellidoc-cta-section {
+    padding: 60px 16px;
+  }
+
+  .intellidoc-cta-heading {
+    font-size: clamp(22px, 6vw, 36px);
+  }
+}
+
+/* ---------- Section ---------- */
+.Intellidoc-business-section {
+  background: var(--bg);
+  padding: 80px 20px;
+}
+
+.Intellidoc-business-container {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+/* ---------- Heading ---------- */
+.Intellidoc-business-heading {
+  /* font-family: Arial, Helvetica, sans-serif; */
+  text-align: center;
+  color: var(--ink);
+  font-size: clamp(28px, 3vw, 56px);
+  font-weight: 600;
+  margin-bottom: 38px;
+}
+
+/* ---------- Grid ---------- */
+.Intellidoc-business-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+/* ---------- Card ---------- */
+.Intellidoc-business-card {
+  border: 1.5px dashed var(--border);
+  border-radius: var(--radius);
+  background: #fff;
+  padding: 32px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.Intellidoc-business-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary);
+  box-shadow: 0 10px 24px rgba(5, 175, 242, 0.15);
+}
+
+.Intellidoc-business-icon {
+  text-align: center;
+  font-size: 40px;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+
+.Intellidoc-business-card h3 {
+  font-size: clamp(18px, 1.5vw, 22px);
+  font-weight: 700;
+  color: var(--ink);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.Intellidoc-business-card p {
+  color: var(--muted);
+  font-size: clamp(14px, 1.3vw, 16px);
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .Intellidoc-business-section {
+    padding: 60px 16px;
+  }
+  .Intellidoc-business-card {
+    padding: 24px;
+  }
+}
+
+/* ---------- Intellidoc Copilot ---------- */
+.intellidoc-cpilot-slice {
+  background: #f6f6f7;               /* subtle surface like screenshot */
+  border-radius: 18px;
+  padding: 28px;
+}
+
+.intellidoc-cpilot-slice__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+/* Left copy */
+.intellidoc-cpilot-slice__copy { padding: 20px 8px; }
+
+.intellidoc-cpilot-title {
+  margin: 14px 0 10px;
+  font-size: clamp(28px, 3vw, 56px);
+  line-height: 1.1;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.intellidoc-cpilot-desc {
+  color: #6b7280; /* muted gray like screenshot */
+  font-size: clamp(14px, 1.2vw, 18px);
+  line-height: 1.8;
+  max-width: 48ch;
+}
+
+.intellidoc-cpilot-btn {
+  display: inline-block;
+  margin-top: 22px;
+  background: #111;                   /* dark button */
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform .08s ease, background .2s ease;
+}
+.intellidoc-cpilot-btn:hover { background: #1f2937; }
+.intellidoc-cpilot-btn:active { transform: translateY(1px); }
+
+/* Right media */
+.intellidoc-cpilot-slice__media {
+  background: #e9e9ea;
+  border-radius: 16px;
+  padding: 32px;
+  display: grid;
+  place-items: center;
+}
+.intellidoc-cpilot-img {
+  width: 100%;
+  max-width: 520px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* --------- Responsive --------- */
+@media (max-width: 900px) {
+  .intellidoc-cpilot-slice__inner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .intellidoc-cpilot-slice__media { order: 2; }
+  .intellidoc-cpilot-slice__copy { order: 1; }
+}
+
+
+
+/*  */
 .gent-hero {
   position: relative;
   overflow: hidden;
@@ -3280,7 +3526,7 @@ textarea {
 
 /* ---------- Icon ---------- */
 .icon {
-  margin-bottom: 16px;
+  /* margin-bottom: 16px; */
   color: var(--muted);
 }
 
