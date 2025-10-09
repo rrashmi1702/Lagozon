@@ -161,48 +161,51 @@ const SF_ICON_URLS = [
 
 
 // Industries Data
-const data = {
-  healthcare: {
-    img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop",
-    text: "We help healthcare providers modernize compliance, operations, and reporting with AI-powered document intelligence, Qlik dashboards, and cloud analytics. Our solutions enhance regulatory tracking, patient data access, and performance insights—improving care delivery and operational efficiency."
-  },
-  retail: {
-    img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop",
-    text: "From daily store insights to granular demand forecasting, our AI and analytics tools empower retailers to optimize pricing, inventory, and customer engagement. Solutions like RetailPulse.AI guide regional managers with actionable summaries, boosting efficiency across retail clusters."
-  },
-  manufacturing: {
-    img: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=800&h=600&fit=crop",
-    text: "We enable manufacturers to track operational KPIs, unify reporting across plants, and improve forecasting accuracy. With tools like DBQuery.AI and custom dashboards, we reduce IT dependency, unlock real-time insights, and streamline supply chain and production decisions."
-  },
-  automobile: {
-    img: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=600&fit=crop",
-    text: "Lagozon supports automotive clients with AI-led service analytics, part-level cost insights, and dealer performance dashboards. We empower vehicle repair and service teams to reduce delays, optimize processes, and scale decision intelligence across regions and functions."
-  },
-  logistics: {
-    img: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=800&h=600&fit=crop",
-    text: "Our solutions drive visibility across fleet operations, service metrics, and delivery performance. From geo-analytics to S&OP dashboards, we unify distributed data for faster exception handling, better route planning, and smarter network decisions across logistics chains."
-  },
-  pharma: {
-    img: "https://images.unsplash.com/photo-1585435557343-3b092031a831?w=800&h=600&fit=crop",
-    text: "We enable pharma companies to automate CVR analysis, track product interest, and enhance sales planning using AI. From sentiment tagging to dashboarding, our tools provide intelligence across sales, marketing, and regulatory compliance functions."
-  }
-};
+  (function () {
+    const tablist = document.querySelector('.industry-tabs');
+    if (!tablist) return;
 
-function switchIndustry(industry, el) {
-  // Update image and text
-  document.getElementById('industry-img').src = data[industry].img;
-  document.getElementById('industry-text').innerHTML = data[industry].text;
+    const tabs = tablist.querySelectorAll('.industry-tab');
+    const panels = document.querySelectorAll('.industry-panel');
 
-  // Update active tab
-  const tabs = document.querySelectorAll('.industry-tab');
-  tabs.forEach(tab => tab.classList.remove('active'));
-  el.classList.add('active');
+    function activate(tab) {
+      // deactivate all
+      tabs.forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      panels.forEach(p => p.classList.add('is-hidden'));
 
-  // Scroll active tab into view on mobile
-  if (window.innerWidth <= 768) {
-    el.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-  }
-}
+      // activate current
+      const panelId = tab.getAttribute('aria-controls');
+      const panel = document.getElementById(panelId);
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      if (panel) panel.classList.remove('is-hidden');
+
+      // mobile convenience
+      if (window.innerWidth <= 768) {
+        tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
+    }
+
+    // click handlers
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => activate(tab));
+      tab.addEventListener('keydown', (e) => {
+        // arrow key support
+        const i = Array.from(tabs).indexOf(tab);
+        if (e.key === 'ArrowRight') { e.preventDefault(); activate(tabs[(i + 1) % tabs.length]); }
+        if (e.key === 'ArrowLeft')  { e.preventDefault(); activate(tabs[(i - 1 + tabs.length) % tabs.length]); }
+      });
+    });
+
+    // deep-link via hash (e.g., #retail)
+    const hash = window.location.hash.replace('#', '');
+    const deep = hash && document.getElementById(`tab-${hash}`);
+    activate(deep || tabs[0]);
+  })();
+
 
 
 // Testimonials
